@@ -1,0 +1,145 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  
+ 
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 180px;
+height:80px;
+  border-radius: 45px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+ display: none; 
+width:300px;
+  margin-left:40%;
+  margin-top:5%;
+  border: 1px  gray;
+  box-shadow: 5px 5px 5px;
+ height:500px;
+border-radius:15px;
+}
+
+/* Add styles to the form container */
+.form-container {
+  background-color: white;
+}
+
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+  margin:10px;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+.heading{
+width:300px;
+height:330px;
+padding:10px;
+margin:0px 0px 0px 0px;
+background-color:orange;
+  text-align: left;
+  color:white;
+}
+.chatbot
+{width:280px;
+height:330px;
+padding:15px;
+background-color:white;
+  color:black;
+border-radius:5px;
+border: 1px solid #D3D3D3;
+}
+.open-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.open-button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.open-button:hover span {
+  padding-right: 25px;
+}
+
+.open-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+</head>
+<body>
+
+<button class="open-button" onclick="openForm()"><span>Help</span></button>
+
+<div class="chat-popup" id="myForm">
+  <form  class="form-container">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeForm()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+ 
+    <div class="heading" >
+	<h5>IRIS</h5>
+   <label for="msg" style="font-size:small bold;">Hello  <i class="fa fa-hand-paper-o" style="font-size:18px bold;color:white;"></i></label><br>
+	<label for="msg" style="font-size:small;">I am Iris, A Virtual Assistant<br>
+	How may I help you?</label><br>
+	<span class="iconify" style="width: 35px; height: 35px;padding-bottom:2px;padding-top:1px;color:white;" data-icon="mdi-robot" data-inline="true"></span>
+		<div class="chatbot"><label for="msg" style="font-size:medium bold;">Frequently asked question  <i class="fa fa-question" style="font-size:18px bold;color:orange;"></i></label>
+		<button type="button" class="btn btn-light" style="width:250px;border-color:#D3D3D3;font-size:small;margin-bottom:10px;">Can I redeem my fb before the original term?</button>
+		<button type="button" class="btn btn-light" style="width:250px;border-color:#D3D3D3;font-size:small;margin-bottom:10px;">How do I pay my credit card bill?</button>
+		<button type="button" class="btn btn-light" style="width:250px;border-color:#D3D3D3;font-size:small;margin-bottom:10px;">How can I get my Account statement?</button>
+		<button type="button" class="btn btn-light" style="width:250px;border-color:#D3D3D3;font-size:small;margin-bottom:30px;">What is the tenure of Fixed deposite?</button>
+<button type="submit" class="btn btn-light"style="border-radius:45px;box-shadow:2px 2px 2px 1px;margin-left:15px;margin-bottom:0px;">Start a new conversation</button>
+</div>
+</div>
+  </div>
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+</script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
